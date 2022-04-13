@@ -1,0 +1,47 @@
+#1 create folder of the project 
+
+#2 create venv
+	python -m venv venv
+
+#3 start venv
+	.\venv\Scripts\Activate
+
+#4 install Django
+	pip install django
+
+#5 Upgrade of the tools
+	python -m pip install pip setuptools wheel --upgrade
+
+#6 update project to github
+	git config --global user.name ""
+	git config --global user.email ""
+	git config --global init.defaultBranch main
+	git init
+	ssh-keygen
+	copy SSH key 
+		C:\Users\Warley Souza\.ssh\id_rsa.pub
+	paste in github
+		https://github.com/settings/keys  >> new SSH >> add
+	copy ssh to project git
+	git remote add origin <<ssh link>>
+
+#7 send project to git 
+	git push
+	* git push --set-upstream origin main
+
+#8 select interpreter path 
+	ctrl + shift + p >> select interpreter >> python with venv\venv
+
+
+######### CREATE PROJECT DJANGO #########
+
+#9 django-admin startproject <<name>> . (this . is veru important)
+
+#10 python manage.py runserver 
+
+######### CREATE APP DJANGO #########
+
+#11 python manage.py startapp <<name APP>>
+	
+		
+		
