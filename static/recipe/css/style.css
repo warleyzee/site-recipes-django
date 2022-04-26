@@ -228,9 +228,12 @@ h1,h2,h3,h4,h5,h6{
     filter: brightness(2);
 }
 
+
+
 .preparation-steps {
-    padding: var(--spacing-gutter-medium);
-}
+    padding: 0 2rem;
+    margin: 2rem;
+  }
 
 .main-footer{
     display: flex;
