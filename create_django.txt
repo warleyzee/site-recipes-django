@@ -43,11 +43,27 @@
 
 #11 python manage.py startapp <<name APP>>
 
+<<<<<<< HEAD
 ######### CREATE BD DJANGO #########
 
 #12 python manage.py migrate
 #13 python manage.py makemigrations
 
 	
+=======
+######### CREATE DB DJANGO #########
+
+File Models in the project
+
+# 12 python manage.py migrate
+
+# 13 python manage.py makemigrations
+
+# 14 python manage.py migrate	
+
+######### CREATE USER DB DJANGO #########
+
+# 15 python manage.py createsuperuser
+>>>>>>> c0f2431b99c704a27262d6a5d7e81d675cbb0e24
 		
 		

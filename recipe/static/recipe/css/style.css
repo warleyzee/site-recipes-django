@@ -209,7 +209,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .recipe-footer a:hover{
-    filter: brightness(2);
+    filter: brightness(2); 
 }
 
 .main-content-details .recipe-list-item{
