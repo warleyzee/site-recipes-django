@@ -13,7 +13,7 @@ class Protudos(models.Model):
     title = models.CharField(max_length=70)
     description = models.CharField(max_length=70)
     slug = models.SlugField()
-    preparation_time = models.ImageField()
+    preparation_time = models.CharField(max_length=70)
     preparation_time_unit = models.CharField(max_length=70)
     servings = models.CharField(max_length=70)
     servings_unit = models.CharField(max_length=70)
