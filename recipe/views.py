@@ -1,8 +1,9 @@
 from unicodedata import name
 from django.shortcuts import render, get_list_or_404, get_object_or_404
 from util.recipes.factory import make_recipe
+from .models import Categoria,Receita
 
-# Create your views here.
+# Create your views here.s
 
 def home(request):
     recipe = Receita.objects.filter(is_published=True).order_by('-id')
@@ -10,17 +11,17 @@ def home(request):
         'recipes' : recipe
     })
 
-def category(request, category_id):
+def Categoria(request, Categoria_id):
     recipes = get_list_or_404(
         Receita.objects.filter(
-            category__id=category_id,
+            Categoria__id=Categoria_id,
             is_published=True,
         ).order_by('-id')
     )
 
     return render(request, 'recipe/pages/category.html', context={
         'recipes': recipes,
-        'title': f'{recipes[0].category.name} - Category | '
+        'title': f'{recipes[0].Categoria.name} - Category | '
     })
 
 def recipe(request, id):
