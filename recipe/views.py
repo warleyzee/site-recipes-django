@@ -6,6 +6,7 @@ from .models import Categoria,Receita
 
 def home(request):
     return render(request, 'recipe/pages/home.html', context={
+<<<<<<< HEAD
         'recipes' : recipe
     })
 
@@ -20,6 +21,9 @@ def Categoria(request, Categoria_id):
     return render(request, 'recipe/pages/category.html', context={
         'recipes': recipes,
         'title': f'{recipes[0].Categoria.name} - Category | '
+=======
+        'recipes' : [make_recipe() for _ in range(10)]
+>>>>>>> a8214af32b3fe13b82ad089af855517754f2be2d
     })
 
 def recipe(request, id):

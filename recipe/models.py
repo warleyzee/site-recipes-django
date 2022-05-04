@@ -10,6 +10,7 @@ class Tipos(models.Model):
     def __str__(self):
         return self.name
 
+<<<<<<< HEAD
 class Protudos(models.Model):
     title = models.CharField(max_length=70)
     description = models.CharField(max_length=70)
@@ -39,6 +40,11 @@ class Categoria(models.Model):
 class Receita(models.Model):
     title = models.CharField(max_length=65)
     description = models.CharField(max_length=165)
+=======
+class Recipes(models.Model):
+    title = models.CharField(max_length=70)
+    description = models.CharField(max_length=170)
+>>>>>>> a8214af32b3fe13b82ad089af855517754f2be2d
     slug = models.SlugField()
     preparation_time = models.IntegerField()
     preparation_time_unit = models.CharField(max_length=70)
@@ -60,4 +66,7 @@ class Receita(models.Model):
 
     def __str__(self):
         return self.title 
+<<<<<<< HEAD
   
+=======
+>>>>>>> a8214af32b3fe13b82ad089af855517754f2be2d
