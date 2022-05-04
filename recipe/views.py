@@ -1,12 +1,10 @@
-from unicodedata import name
-from django.shortcuts import render, get_list_or_404, get_object_or_404
+from django.shortcuts import render
 from util.recipes.factory import make_recipe
 from .models import Categoria,Receita
 
 # Create your views here.s
 
 def home(request):
-    recipe = Receita.objects.filter(is_published=True).order_by('-id')
     return render(request, 'recipe/pages/home.html', context={
         'recipes' : recipe
     })
@@ -25,12 +23,7 @@ def Categoria(request, Categoria_id):
     })
 
 def recipe(request, id):
-    recipe = Receita.objects.filter(
-        pk=id,
-        is_published = True,
-    ).order_by('-id').first()
- 
     return render(request, 'recipe/pages/recipe-view.html', context={
-        'recipe' : recipe,
+        'recipe' : make_recipe(),
         'is_detail_page': True,
     })

@@ -1,5 +1,6 @@
-from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth.models import User
+
 # Create your models here.
 
   
@@ -40,9 +41,9 @@ class Receita(models.Model):
     description = models.CharField(max_length=165)
     slug = models.SlugField()
     preparation_time = models.IntegerField()
-    preparation_time_unit = models.CharField(max_length=65)
+    preparation_time_unit = models.CharField(max_length=70)
     servings = models.IntegerField()
-    servings_unit = models.CharField(max_length=65)
+    servings_unit = models.CharField(max_length=70)
     preparation_steps = models.TextField()
     preparation_steps_is_html = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
